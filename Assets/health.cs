@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class health : MonoBehaviour
 {
+    //Enemy Health Script
     public SpriteRenderer Sprite;
 
     public float Health = 20;
