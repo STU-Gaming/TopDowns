@@ -4,30 +4,32 @@ using UnityEngine;
 
 public class attacking : MonoBehaviour
 {
-    
-    private GameObject enemy;
+    health Health;
+    private GameObject[] enemies;
+
+    public bool attacki = true;
+  
     // Start is called before the first frame update
     void Start()
     {
-        
-    }
-
-    private void Update()
-    {
-        
+        enemies = GameObject.FindGameObjectsWithTag("enemy");
     }
 
     // Update is called once per frame
-    void isattackings()
-    {
-        
-
-    }
+    
     private void OnTriggerEnter2D(Collider2D collision)
     {
-       
-            Destroy(collision.gameObject);
+        if(attacki == false)
+        {
+            Health = collision.GetComponent<health>();
+            Health.Damage();
+        }
         
+    }
+    public void isattackings()
+    {
+        attacki = true;
+
     }
 
 }

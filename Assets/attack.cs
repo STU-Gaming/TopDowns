@@ -20,6 +20,7 @@ public class attack : MonoBehaviour
         {
             isattacking = true;
             anim.SetTrigger("attack");
+            gameObject.GetComponentInChildren<attacking>().attacki = false;
         }
 
     }
