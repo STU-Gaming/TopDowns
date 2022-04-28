@@ -11,10 +11,6 @@ public class EnemyController : MonoBehaviour
     public float rotationspeed;
     public float speed;
 
-    private HP HP;
-
-    public bool AttPlayer = true;
-    public bool triggered;
     // Start is called before the first frame update
     void Start()
     {
@@ -34,33 +30,7 @@ public class EnemyController : MonoBehaviour
         transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(0, 0, angle), rotationspeed * Time.deltaTime);
 
         rb.AddForce(transform.right * speed);
-        // attacking Player
-        if(AttPlayer == true && triggered == true)
-        {
-            StartCoroutine(Attacking(1f));
-            AttPlayer = false;
-        }
-    }
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        HP = collision.GetComponent<HP>();
         
-        triggered = true;
-        AttPlayer = true;
-
-
     }
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        
-        triggered = false;
-    }
-    public IEnumerator Attacking(float t)
-    {
-        HP.Damage();
-        
-        yield return new WaitForSeconds(2f);
-        AttPlayer = true;
-
-    }
+    
 }
