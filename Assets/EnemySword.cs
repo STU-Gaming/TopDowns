@@ -17,26 +17,23 @@ public class EnemySword : MonoBehaviour
         if (AttPlayer == true && triggered == true)
         {
             StartCoroutine(Attacking(1f));
-            AttPlayer = false;
         }
+
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         HP = collision.GetComponent<HP>();
-
         triggered = true;
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
-
-        triggered = false;
+        HP = null;
     }
     public IEnumerator Attacking(float t)
     {
         HP.Damage();
-
+        AttPlayer = false;
         yield return new WaitForSeconds(1f);
         AttPlayer = true;
-
     }
 }

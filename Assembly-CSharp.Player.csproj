@@ -58,12 +58,15 @@
   <ItemGroup>
     <Compile Include="Assets\EnemyController.cs" />
     <Compile Include="Assets\Shooting.cs" />
+    <Compile Include="Assets\HP.cs" />
     <Compile Include="Assets\DestroyArrow.cs" />
     <Compile Include="Assets\attacking.cs" />
     <Compile Include="Assets\attack.cs" />
+    <Compile Include="Assets\EnemySword.cs" />
     <Compile Include="Assets\health.cs" />
     <Compile Include="Assets\movement.cs" />
-    <Compile Include="Assets\HP.cs" />
+    <Compile Include="Assets\Wand.cs" />
+    <Compile Include="Assets\EnemyFireBall.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
