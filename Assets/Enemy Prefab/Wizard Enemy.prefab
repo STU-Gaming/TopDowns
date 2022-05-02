@@ -44,7 +44,8 @@ GameObject:
   - component: {fileID: 4688381353137517354}
   - component: {fileID: 4688381353137517357}
   - component: {fileID: 4688381353137517352}
-  m_Layer: 0
+  - component: {fileID: 3665933108352289688}
+  m_Layer: 9
   m_Name: Wizard Enemy
   m_TagString: enemy
   m_Icon: {fileID: 0}
@@ -145,7 +146,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 0}
   rb: {fileID: 4688381353137517357}
-  rotationspeed: 1
+  rotationspeed: 2
   speed: 3
   detectionradius: 12
   PlayerDetected: 0
@@ -189,6 +190,22 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 1.06
+--- !u!58 &3665933108352289688
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4688381353137517356}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.024759531, y: 0.0643754}
+  serializedVersion: 2
+  m_Radius: 0.5685184
 --- !u!1 &4688381354170055455
 GameObject:
   m_ObjectHideFlags: 0

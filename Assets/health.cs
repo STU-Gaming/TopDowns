@@ -8,6 +8,8 @@ public class health : MonoBehaviour
     public SpriteRenderer Sprite;
 
     public float Health = 20;
+
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -22,10 +24,10 @@ public class health : MonoBehaviour
             Destroy(this.gameObject);
         }
     }
-    public void Damage()
+    public void Damage(float dmg)
     {
         Sprite.color = Color.red;
-        Health -= 2;
+        Health -= dmg;
         StartCoroutine(ChangeColor(1f));
     }
     public IEnumerator ChangeColor(float t)

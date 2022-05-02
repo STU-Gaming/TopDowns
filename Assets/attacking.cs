@@ -46,7 +46,7 @@ public class attacking : MonoBehaviour
     //this is for so the attack doesnt happend multiple times in one click
     public IEnumerator Attacking(float t)
     {
-        Health.Damage();
+        Health.Damage(-2);
 
         yield return new WaitForSeconds(2f);
         attacki = false;

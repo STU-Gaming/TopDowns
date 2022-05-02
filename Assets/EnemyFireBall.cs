@@ -15,10 +15,12 @@ public class EnemyFireBall : MonoBehaviour
   
     private void OnTriggerEnter2D(Collider2D collision)
     {
-
         HP = collision.GetComponent<HP>();
         HP.Damage();
         Destroy(this.gameObject);
-
+    }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        Destroy(this.gameObject);
     }
 }

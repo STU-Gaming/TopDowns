@@ -6,9 +6,11 @@ public class Shooting : MonoBehaviour
 {
     public GameObject bow;
 
-    public GameObject arrow;
+    public GameObject Projectile;
 
     public Transform shootpoint;
+
+    public float force = 1000;
 
     // Start is called before the first frame update
     void Start()
@@ -21,7 +23,7 @@ public class Shooting : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Mouse0))
         {
-          GameObject Arrow = Instantiate(arrow, shootpoint.position, shootpoint.rotation);
+          GameObject Arrow = Instantiate(Projectile, shootpoint.position, shootpoint.rotation);
             Arrow.GetComponent<Rigidbody2D>().AddForce(transform.up * 1000);
         }
     }

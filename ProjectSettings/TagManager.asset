@@ -15,9 +15,9 @@ TagManager:
   - EnemySword
   - Weapon
   - Player
-  - 
-  - 
-  - 
+  - Enemy
+  - Walls
+  - Projectile
   - 
   - 
   - 
