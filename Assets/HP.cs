@@ -2,11 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class HP : MonoBehaviour
 {
     //Player Health Script
     public SpriteRenderer Sprite;
+
+    public Slider HpBar;
 
     public float Health = 20;
     // Start is called before the first frame update
@@ -18,6 +21,10 @@ public class HP : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        HpBar = GameObject.FindGameObjectWithTag("hp").GetComponent<Slider>();
+        HpBar.maxValue = 20;
+        HpBar.value = Health;
+
         if(Health <= 0)
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 0);

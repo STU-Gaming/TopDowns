@@ -67,6 +67,7 @@
     <Compile Include="Assets\health.cs" />
     <Compile Include="Assets\movement.cs" />
     <Compile Include="Assets\EnemyFireBall.cs" />
+    <Compile Include="Assets\WeaponSwitch.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
