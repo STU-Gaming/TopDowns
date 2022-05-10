@@ -149,6 +149,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Sprite: {fileID: 1857960230449120532}
+  HpBar: {fileID: 0}
   Health: 20
 --- !u!61 &1857960229086878443
 BoxCollider2D:
